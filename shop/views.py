@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from  .models import *
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -50,5 +51,8 @@ def commande(request, *args, **kwargs):
     }
 
     return render(request, 'shop/commande.html', context)
+
+def update_article(request, *args, **kwargs):
+    return JsonResponse("produit modifier", safe=False)
 
 
